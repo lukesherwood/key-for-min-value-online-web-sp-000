@@ -6,7 +6,6 @@ def key_for_min_value(name_hash)
     if temp_value == ""
       temp_key = key
       temp_value = value
-
     elsif value < temp_value
       temp_key = key
       temp_value = value
