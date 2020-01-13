@@ -1,7 +1,10 @@
-# prereqs: iterators, hashes, conditional logic
-# Given a hash with numeric values, return the key for the smallest value
-
-def key_for_min_value(name_hash)
-  return nil if name_hash.empty?
-  name_hash.max_by {|k, v| 0-v}[0]
-end
+# prereqs: iterators, hashes, conditional log
+def key_for_min_value(name_hash)	
+  min_value = nil	
+  key = nil	
+  name_hash.each do |name, num|	  name_hash.each do |name, num|
+    if min_value == nil || min_value > num
+      min_value = num
+      if min_value == name_hash[nam
+        key = name
+      end
