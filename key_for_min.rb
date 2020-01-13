@@ -1,4 +1,5 @@
 def key_for_min_value(name_hash)
+  #returns key with lowest value
   return nil if name_hash == {}
   temp_key = ""
   temp_value = ""
@@ -13,6 +14,5 @@ def key_for_min_value(name_hash)
       temp_value = value
     end
   end
-#returns key with lowest value
   temp_key
 end
