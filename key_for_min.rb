@@ -1,14 +1,16 @@
-# prereqs: iterators, hashes, conditional log
-def key_for_min_value(name_hash)	
-  min_value = nil	
-  key = nil	
-  name_hash.each do |name, num|	  name_hash.each do |name, num|
-    if min_value == nil || min_value > num
-      min_value = num
-      if min_value == name_hash[nam
-        key = name
-      end
+def key_for_min_value(name_hash)
+  return nil if name_hash == {}
+  temp_key = ""
+  temp_value = ""
+  name_hash.each do |key, value| #blake: 500
+    if (temp_value == "") #if first time we run and temp_value hasnt been assigned, assign it
+      temp_key = key
+      temp_value = value
+
+    elsif (value < temp_value) #if we have a temp_value, compare the current value to it
+      temp_key = key
+      temp_value = value
     end
   end
-  key
+  temp_key
 end
